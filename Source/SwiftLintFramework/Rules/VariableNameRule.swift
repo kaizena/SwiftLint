@@ -58,7 +58,7 @@ public struct VariableNameRule: ASTRule {
             } else if name.substringToIndex(name.startIndex.successor()).isUppercase() {
                 violations.append(StyleViolation(type: .NameFormat,
                     location: location,
-                    severity: .High,
+                    severity: .Medium,
                     reason: "Variable name should start with a lowercase character: '\(name)'"))
             } else if count(name) < 3 || count(name) > 40 {
                 violations.append(StyleViolation(type: .NameFormat,
